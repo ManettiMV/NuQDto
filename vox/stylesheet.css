@@ -1,0 +1,260 @@
+@font-face {
+    font-family: 'Vox';
+    src: url('Vox-Light.eot');
+    src: local('Vox Light'), local('Vox-Light'),
+        url('Vox-Light.eot?#iefix') format('embedded-opentype'),
+        url('Vox-Light.woff2') format('woff2'),
+        url('Vox-Light.woff') format('woff'),
+        url('Vox-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vox';
+    src: url('Vox-BoldItalic.eot');
+    src: local('Vox Bold Italic'), local('Vox-BoldItalic'),
+        url('Vox-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Vox-BoldItalic.woff2') format('woff2'),
+        url('Vox-BoldItalic.woff') format('woff'),
+        url('Vox-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vox';
+    src: url('Vox-LightItalic.eot');
+    src: local('Vox Light Italic'), local('Vox-LightItalic'),
+        url('Vox-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Vox-LightItalic.woff2') format('woff2'),
+        url('Vox-LightItalic.woff') format('woff'),
+        url('Vox-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vox Med';
+    src: url('Vox-MediumItalic.eot');
+    src: local('Vox Medium Italic'), local('Vox-MediumItalic'),
+        url('Vox-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('Vox-MediumItalic.woff2') format('woff2'),
+        url('Vox-MediumItalic.woff') format('woff'),
+        url('Vox-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vox Med';
+    src: url('Vox-Medium.eot');
+    src: local('Vox Medium'), local('Vox-Medium'),
+        url('Vox-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Vox-Medium.woff2') format('woff2'),
+        url('Vox-Medium.woff') format('woff'),
+        url('Vox-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vox';
+    src: url('Vox-Bold.eot');
+    src: local('Vox Bold'), local('Vox-Bold'),
+        url('Vox-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Vox-Bold.woff2') format('woff2'),
+        url('Vox-Bold.woff') format('woff'),
+        url('Vox-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vox';
+    src: url('Vox-Italic.eot');
+    src: local('Vox Italic'), local('Vox-Italic'),
+        url('Vox-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Vox-Italic.woff2') format('woff2'),
+        url('Vox-Italic.woff') format('woff'),
+        url('Vox-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vox Wide';
+    src: url('VoxWide-Italic.eot');
+    src: local('Vox Wide Italic'), local('VoxWide-Italic'),
+        url('VoxWide-Italic.eot?#iefix') format('embedded-opentype'),
+        url('VoxWide-Italic.woff2') format('woff2'),
+        url('VoxWide-Italic.woff') format('woff'),
+        url('VoxWide-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vox Wide';
+    src: url('VoxWide-LightItalic.eot');
+    src: local('Vox Wide Light Italic'), local('VoxWide-LightItalic'),
+        url('VoxWide-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('VoxWide-LightItalic.woff2') format('woff2'),
+        url('VoxWide-LightItalic.woff') format('woff'),
+        url('VoxWide-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vox Wide';
+    src: url('VoxWide-BoldItalic.eot');
+    src: local('Vox Wide Bold Italic'), local('VoxWide-BoldItalic'),
+        url('VoxWide-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('VoxWide-BoldItalic.woff2') format('woff2'),
+        url('VoxWide-BoldItalic.woff') format('woff'),
+        url('VoxWide-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vox Wide SemBd';
+    src: url('VoxWide-SemiBoldItalic.eot');
+    src: local('Vox Wide SemiBold Italic'), local('VoxWide-SemiBoldItalic'),
+        url('VoxWide-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('VoxWide-SemiBoldItalic.woff2') format('woff2'),
+        url('VoxWide-SemiBoldItalic.woff') format('woff'),
+        url('VoxWide-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vox Wide';
+    src: url('VoxWide-Regular.eot');
+    src: local('Vox Wide Regular'), local('VoxWide-Regular'),
+        url('VoxWide-Regular.eot?#iefix') format('embedded-opentype'),
+        url('VoxWide-Regular.woff2') format('woff2'),
+        url('VoxWide-Regular.woff') format('woff'),
+        url('VoxWide-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vox SemBd';
+    src: url('Vox-SemiBoldItalic.eot');
+    src: local('Vox SemiBold Italic'), local('Vox-SemiBoldItalic'),
+        url('Vox-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Vox-SemiBoldItalic.woff2') format('woff2'),
+        url('Vox-SemiBoldItalic.woff') format('woff'),
+        url('Vox-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vox Wide';
+    src: url('VoxWide-Bold.eot');
+    src: local('Vox Wide Bold'), local('VoxWide-Bold'),
+        url('VoxWide-Bold.eot?#iefix') format('embedded-opentype'),
+        url('VoxWide-Bold.woff2') format('woff2'),
+        url('VoxWide-Bold.woff') format('woff'),
+        url('VoxWide-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vox Wide SemBd';
+    src: url('VoxWide-SemiBold.eot');
+    src: local('Vox Wide SemiBold'), local('VoxWide-SemiBold'),
+        url('VoxWide-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('VoxWide-SemiBold.woff2') format('woff2'),
+        url('VoxWide-SemiBold.woff') format('woff'),
+        url('VoxWide-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vox Wide Med';
+    src: url('VoxWide-MediumItalic.eot');
+    src: local('Vox Wide Medium Italic'), local('VoxWide-MediumItalic'),
+        url('VoxWide-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('VoxWide-MediumItalic.woff2') format('woff2'),
+        url('VoxWide-MediumItalic.woff') format('woff'),
+        url('VoxWide-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vox Wide';
+    src: url('VoxWide-Light.eot');
+    src: local('Vox Wide Light'), local('VoxWide-Light'),
+        url('VoxWide-Light.eot?#iefix') format('embedded-opentype'),
+        url('VoxWide-Light.woff2') format('woff2'),
+        url('VoxWide-Light.woff') format('woff'),
+        url('VoxWide-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vox SemBd';
+    src: url('Vox-SemiBold.eot');
+    src: local('Vox SemiBold'), local('Vox-SemiBold'),
+        url('Vox-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Vox-SemiBold.woff2') format('woff2'),
+        url('Vox-SemiBold.woff') format('woff'),
+        url('Vox-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vox';
+    src: url('Vox-Regular.eot');
+    src: local('Vox Regular'), local('Vox-Regular'),
+        url('Vox-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Vox-Regular.woff2') format('woff2'),
+        url('Vox-Regular.woff') format('woff'),
+        url('Vox-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vox Wide Med';
+    src: url('VoxWide-Medium.eot');
+    src: local('Vox Wide Medium'), local('VoxWide-Medium'),
+        url('VoxWide-Medium.eot?#iefix') format('embedded-opentype'),
+        url('VoxWide-Medium.woff2') format('woff2'),
+        url('VoxWide-Medium.woff') format('woff'),
+        url('VoxWide-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
