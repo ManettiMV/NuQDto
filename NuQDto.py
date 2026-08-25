@@ -1,13 +1,25 @@
 import os
 import re
+import sys
+import platform
 import tkinter as tk
 from tkinter import ttk, messagebox
 from PIL import Image, ImageDraw, ImageFont
 
-FOLDER_FONT = "vox"
+# Garante que o diretório de trabalho seja SEMPRE a pasta onde este script está salvo
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+os.chdir(BASE_DIR)
+
+# Trata compatibilidade de versão do Pillow (Linux x Windows)
+try:
+    RESAMPLE_FILTER = Image.Resampling.LANCZOS
+except AttributeError:
+    RESAMPLE_FILTER = Image.LANCZOS
+
+FOLDER_FONT = os.path.join(BASE_DIR, "vox")
 DEFAULT_FONT_FILE_NAME = "Vox-Regular.ttf"
-FOLDER_RESULTS = "results"
-FILE_PHOENIX = "fenix.png"
+FOLDER_RESULTS = os.path.join(BASE_DIR, "results")
+FILE_PHOENIX = os.path.join(BASE_DIR, "fenix.png")
 
 config = {
     "font_name": DEFAULT_FONT_FILE_NAME,
@@ -25,9 +37,10 @@ def list_available_fonts():
         os.makedirs(FOLDER_FONT, exist_ok=True)
         return []
 
-    valid_extensions = (".ttf", ".otf", ".TTF", ".OTF")
+    valid_extensions = (".ttf", ".otf")
     files = [
-        f for f in os.listdir(FOLDER_FONT) if f.endswith(valid_extensions)
+        f for f in os.listdir(FOLDER_FONT) 
+        if f.lower().endswith(valid_extensions)
     ]
     return files
 
@@ -39,9 +52,12 @@ def sanitize_file_name(text):
 
 def cut_os_in_half(image, text, font, pos_x_text, pos_y_text):
     draw = ImageDraw.Draw(image)
-    x_current = pos_x_text
 
     for i, char in enumerate(text):
+        left_text = text[:i]
+        bbox_left = font.getbbox(left_text) if left_text else (0, 0, 0, 0)
+        x_current = pos_x_text + (bbox_left[2] - bbox_left[0] if left_text else 0)
+
         bbox_char = font.getbbox(char)
         char_width = bbox_char[2] - bbox_char[0]
 
@@ -61,16 +77,14 @@ def cut_os_in_half(image, text, font, pos_x_text, pos_y_text):
 
             draw.rectangle([x1, y1, x2, y2], fill=(0, 0, 0, 0))
 
-        if i < len(text) - 1:
-            bbox_pair = font.getbbox(text[: i + 2])
-            x_current = pos_x_text + bbox_pair[2] - font.getbbox(text[i + 1])[2] + font.getbbox(text[i + 1])[0]
-
 
 def open_settings_window():
     win = tk.Toplevel(app)
     win.title("Generator Settings")
     win.geometry("400x420")
     win.resizable(False, False)
+    
+    win.transient(app)
     win.grab_set()
 
     frame_font = tk.LabelFrame(win, text=" Font ", font=("Arial", 9, "bold"), padx=10, pady=5)
@@ -185,7 +199,7 @@ def generate_png_image():
     except OSError:
         messagebox.showerror(
             "Font Error",
-            f"Could not find the font file at:\n{os.path.abspath(font_path)}\n\n"
+            f"Could not find the font file at:\n{font_path}\n\n"
             f"Make sure '{config['font_name']}' is in the '{FOLDER_FONT}' folder or change the font in Settings (⚙).",
         )
         return
@@ -193,7 +207,7 @@ def generate_png_image():
     if not os.path.exists(FILE_PHOENIX):
         messagebox.showerror(
             "Image Error",
-            f"Could not find the image '{FILE_PHOENIX}' in the project root.",
+            f"Could not find the image '{FILE_PHOENIX}'.\nExpected path:\n{FILE_PHOENIX}",
         )
         return
 
@@ -231,7 +245,7 @@ def generate_png_image():
     new_width = int(orig_width * width_ratio * config["width_scale"])
 
     if new_width > 0 and new_height > 0:
-        img_phoenix = img_phoenix.resize((new_width, new_height), Image.Resampling.LANCZOS)
+        img_phoenix = img_phoenix.resize((new_width, new_height), RESAMPLE_FILTER)
 
     margin = config["margin"]
     space = config["space_between"]
