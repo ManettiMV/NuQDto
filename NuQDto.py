@@ -267,7 +267,7 @@ def generate_png_image():
 
     image.paste(img_phoenix, (pos_x_phoenix, pos_y_phoenix), mask=img_phoenix)
 
-    draw.text((pos_x_text, pos_y_text), text, font=font, fill=(0, 0, 0, 255))
+    draw.text((pos_x_text, pos_y_text), text, font=font, fill=(255, 255, 255, 255))
 
     cut_os_in_half(image, text, font, pos_x_text, pos_y_text)
 
