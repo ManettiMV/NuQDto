@@ -17,7 +17,7 @@ except AttributeError:
     RESAMPLE_FILTER = Image.LANCZOS
 
 FOLDER_FONT = os.path.join(BASE_DIR, "vox")
-DEFAULT_FONT_FILE_NAME = "Vox-Regular.ttf"
+DEFAULT_FONT_FILE_NAME = "Vox-Bold.ttf"
 FOLDER_RESULTS = os.path.join(BASE_DIR, "results")
 FILE_PHOENIX = os.path.join(BASE_DIR, "fenix.png")
 
@@ -301,7 +301,7 @@ lbl_size = tk.Label(app, text="Font size (px):")
 lbl_size.pack(pady=(10, 2))
 
 entry_size = tk.Entry(app, width=10, justify="center")
-entry_size.insert(0, "48")
+entry_size.insert(0, "256")
 entry_size.pack(pady=5)
 
 btn_generate = tk.Button(
