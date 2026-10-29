@@ -27,8 +27,8 @@ config = {
     "phoenix_height_px": 60,
     "scale_factor": 1.0,
     "width_scale": 1.0,
-    "space_between": 15,
-    "margin": 20,
+    "space_between": 5,
+    "margin": 5,
 }
 
 
